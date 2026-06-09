@@ -1,15 +1,15 @@
 import streamlit as st
 
+st.set_page_config(page_title="Blank app with Google auth")
+
 cur_title = "🎈 Testing G.Auth 🎈"
 
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
-
-st.set_page_config(page_title="Blank app with Google auth")
 
 if not st.user.is_logged_in:
     st.title(cur_title)
+    st.write(
+    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+)
     st.write("Please sign in.")
     st.button("Log in with Google", on_click=st.login)
 else:
